@@ -28,24 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.chkUrgente = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtTelegrama = new System.Windows.Forms.TextBox();
             this.btnCalcular = new System.Windows.Forms.Button();
+            this.rbtnOrdinario = new System.Windows.Forms.RadioButton();
+            this.rbtnUrgente = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
-            // 
-            // chkUrgente
-            // 
-            this.chkUrgente.AutoSize = true;
-            this.chkUrgente.Location = new System.Drawing.Point(63, 277);
-            this.chkUrgente.Name = "chkUrgente";
-            this.chkUrgente.Size = new System.Drawing.Size(70, 17);
-            this.chkUrgente.TabIndex = 0;
-            this.chkUrgente.Text = "Urgente?";
-            this.chkUrgente.UseVisualStyleBackColor = true;
-            this.chkUrgente.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label1
             // 
@@ -93,17 +83,42 @@
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
+            // rbtnOrdinario
+            // 
+            this.rbtnOrdinario.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.rbtnOrdinario.Location = new System.Drawing.Point(40, 300);
+            this.rbtnOrdinario.Name = "rbtnOrdinario";
+            this.rbtnOrdinario.Size = new System.Drawing.Size(85, 17);
+            this.rbtnOrdinario.TabIndex = 0;
+            this.rbtnOrdinario.TabStop = true;
+            this.rbtnOrdinario.Text = "Ordinario";
+            this.rbtnOrdinario.UseVisualStyleBackColor = true;
+            this.rbtnOrdinario.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // rbtnUrgente
+            // 
+            this.rbtnUrgente.AutoSize = true;
+            this.rbtnUrgente.Location = new System.Drawing.Point(158, 300);
+            this.rbtnUrgente.Name = "rbtnUrgente";
+            this.rbtnUrgente.Size = new System.Drawing.Size(63, 17);
+            this.rbtnUrgente.TabIndex = 7;
+            this.rbtnUrgente.TabStop = true;
+            this.rbtnUrgente.Text = "Urgente";
+            this.rbtnUrgente.UseVisualStyleBackColor = true;
+            this.rbtnUrgente.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 450);
+            this.Controls.Add(this.rbtnUrgente);
+            this.Controls.Add(this.rbtnOrdinario);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.txtTelegrama);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.chkUrgente);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -113,13 +128,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox chkUrgente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtTelegrama;
         private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.RadioButton rbtnOrdinario;
+        private System.Windows.Forms.RadioButton rbtnUrgente;
     }
 }
 
